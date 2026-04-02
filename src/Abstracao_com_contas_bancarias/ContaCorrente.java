@@ -11,15 +11,15 @@ public class ContaCorrente extends Conta{
 
 
     @Override
-    public Object deposito(double valor) {
+    public void deposito(double valor) {
         super.deposito(valor);
-       double total= getSaldo() + valor;
-       if (total <= valor){
-           IO.println("Deposito efetuado com sucesso "+ getSaldo() + total);
+       if (valor >= getSaldo()){
+           setSaldo(getSaldo()+valor);
+           IO.println("Deposito efetuado com sucesso "+ valor);
        } else {
-           IO.println("Deposito nãe efetuado"+ total);
+           IO.println("Deposito nãe efetuado"+ valor);
        }
-        return null;
+
     }
 
     @Override

@@ -50,9 +50,8 @@ public abstract class Conta {
         this.saldo = saldo;
     }
 
-    public Object deposito(double valor){
+    public void deposito(double valor){
 
-        return null;
     }
 
     public void sacar(double valor){

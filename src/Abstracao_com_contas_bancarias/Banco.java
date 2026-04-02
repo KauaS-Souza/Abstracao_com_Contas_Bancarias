@@ -5,8 +5,8 @@ public class Banco {
 
     ContaCorrente conta = new ContaCorrente();
     conta.setSaldo(2000.00);
-        IO.println(conta.deposito(20));
 
+        conta.deposito(-20);
         conta.sacar(900.00);
 
 
